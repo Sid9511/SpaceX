@@ -125,7 +125,7 @@ section {
 }
 
 .section-a {
-    background-image: url("../images/section-a.jpg");
+    background-image: url("./images/section-a.jpg");
 }
 
 .section-b {
