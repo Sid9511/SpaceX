@@ -125,27 +125,27 @@ section {
 }
 
 .section-a {
-    background-image: url(/imgs/section-a.jpg);
+    background-image: URL("../imgs/section-a.jpg");
 }
 
 .section-b {
-    background-image: url(imgs/section-b.webp);
+    background-image: URL("..imgs/section-b.webp");
 }
 
 .section-c {
-    background-image: url(../imgs/section-c.webp);
+    background-image: URL("../imgs/section-c.webp");
 }
 
 .section-d {
-    background-image: url(../imgs/section-d.webp);
+    background-image: URL("../imgs/section-d.webp");
 }
 
 .section-e {
-    background-image: url(../imgs/section-e.webp);
+    background-image: URL("../imgs/section-e.webp");
 }
 
 .section-f {
-    background-image: url(../imgs/section-f.webp);
+    background-image: URL("../imgs/section-f.webp");
 }
 
 .btn {
@@ -356,35 +356,35 @@ footer ul li a:hover {
 
 /* Inner Pages */
 .falcon9 {
-    background-image: url(../imgs/falcon-9.webp);
+    background-image: URL("../imgs/falcon-9.webp");
 }
 
 .falcon-heavy {
-    background-image: url(../imgs/falcon-heavy.webp);
+    background-image: URL("../imgs/falcon-heavy.webp");
 }
 
 .dragon {
-    background-image: url(../imgs/dragon.webp);
+    background-image: URL("../imgs/dragon.webp");
 }
 
 .starship {
-    background-image: url(../imgs/starship.jpg);
+    background-image: URL("../imgs/starship.jpg");
 }
 
 .human-spaceflight {
-    background-image: url(../imgs/human-spaceflight.webp);
+    background-image: URL("../imgs/human-spaceflight.webp");
 }
 
 .starshield {
-    background-image: url(../imgs/starshield.jpeg);
+    background-image: URL("../imgs/starshield.jpeg");
 }
 
 .starlink {
-    background-image: url(../imgs/starlink.webp);
+    background-image: URL("../imgs/starlink.webp");
 }
 
 .rideshare {
-    background-image: url(../imgs/rideshare.jpg);
+    background-image: URL("../imgs/rideshare.jpg");
 }
 
 .section-animate {
