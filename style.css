@@ -129,7 +129,7 @@ section {
 }
 
 .section-b {
-    background-image: URL("..imgs/section-b.webp");
+    background-image: "..imgs/section-b.webp";
 }
 
 .section-c {
