@@ -1,0 +1,666 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Brandon Grotesque','brandon-grotesque',Helvetica,sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+
+/* Navbar/Header  */
+a {
+   text-decoration: none;
+   color: #fff; 
+}
+
+ul {
+    list-style: none;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    height: 100px;
+    padding: 0 30px;
+}
+
+
+.logo {
+    width: 210px;
+    height: auto;
+}
+
+.logo img {
+    display: block !important;
+    width: 100%;
+    height: auto;
+}
+
+.navbar-items {
+    margin-right: 50px;
+}
+
+.navbar-items ul{
+    display: flex;
+}
+
+.navbar-items ul li {
+    position: relative;
+    margin-right: 20px;
+    padding-bottom: 2px;
+}
+  
+.navbar-items ul li a{
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.navbar-items ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    transform: scaleX(0);
+    transition: transform 0.6s cubic-bezier(0.19,1,0.22,1);
+    transform-origin: right center;
+}
+  
+.navbar-items ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+    transition: transform 0.6s;
+}
+
+
+/* Section A */
+
+section {
+    position: relative;
+    height: 100vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-transform: uppercase;
+}
+
+.section-inner {
+    position: absolute;
+    bottom: 120px;
+    left: 100px;
+    max-width: 480px;
+}
+
+.section-inner h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: 300;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.section-inner h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 20px ;
+    animation: fadeInUp 1s ease-in-out 0.2s;
+    animation-fill-mode: both;
+}
+
+.section-inner a {
+    animation: fadeInUp 1s ease-in-out 0.4s;
+    animation-fill-mode: both;
+}
+
+.section-a {
+    background-image: url(../imgs/section-a.jpg);
+}
+
+.section-b {
+    background-image: url(../imgs/section-b.webp);
+}
+
+.section-c {
+    background-image: url(../imgs/section-c.webp);
+}
+
+.section-d {
+    background-image: url(../imgs/section-d.webp);
+}
+
+.section-e {
+    background-image: url(../imgs/section-e.webp);
+}
+
+.section-f {
+    background-image: url(../imgs/section-f.webp);
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    min-width: 130px;
+    padding: 15px 50px;
+    margin-top: 8px;
+    border: 2px solid #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.btn:hover span{
+    color: #000;
+}
+
+
+.btn .hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    color: #000;
+    z-index: -1;
+    transform: translateY(100%);
+    transition: transform 0.6s cubic-bezier(0.19,1,0.22,1);
+    
+}
+
+
+.btn:hover .hover {
+    transform: translateY(0);
+}
+
+
+.scroll-arrow {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fadeBounce 7s infinite;
+}
+
+
+/* Footer */
+footer {
+    position: relative;
+    padding: 55px 0;
+}
+
+footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul li {
+    margin-right: 30px;
+    color: #aaa;
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 2.5;
+}
+
+footer ul li a {
+    color: #fff;
+    transition: color 0.6s;
+}
+
+footer ul li a:hover {
+    color: #aaa;
+}
+
+
+/* Hamburger Menu */
+
+.hamburger {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    z-index: 10;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background: none;
+    border:none;
+}
+ 
+.ham-top,.ham-middle,.ham-bottom {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    transition: all 0.5s;
+}
+
+.ham-top {
+    transform: translateY(4px);
+}
+
+.ham-middle {
+    transform: translateY(9px);
+}
+
+.ham-bottom{
+    transform: translateY(14px);
+}
+
+.open {
+    transform: rotate(90deg);
+}
+
+.open .ham-top {
+    transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .ham-middle {
+    display: none;     
+}
+
+.open .ham-bottom {    
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);     
+}
+
+
+/* overlay-show */
+.overlay-show {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 3;
+}
+
+/* stop body scroll */
+.stop-scrolling{
+    overflow: hidden;
+}
+
+
+/* Menu */
+.menu-only {
+    display: none;
+}
+
+.main-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 350px;
+    height: 100%;
+    z-index: 4;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    transform: translateX(100%);
+    transition: transform 0.6s cubic-bezier(0.19,1,0.22,1);
+}
+
+/* Show menu */
+.show-menu {
+    transform: translateX(0);
+}
+
+
+.main-menu ul {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    padding: 50px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.main-menu ul li {
+    margin-bottom: 20px;
+    font-size: 15px;
+    text-transform: uppercase;
+    border-bottom: 1px #555 solid;
+    width: 100%;
+    text-align: right;
+    padding-bottom: 2px;
+}
+
+.main-menu ul li a {
+    color: #fff;
+    transition: color 0.6s;
+}
+
+.main-menu ul li a:hover {
+    color: #aaa;
+}
+
+
+/* Inner Pages */
+.falcon9 {
+    background-image: url(../imgs/falcon-9.webp);
+}
+
+.falcon-heavy {
+    background-image: url(../imgs/falcon-heavy.webp);
+}
+
+.dragon {
+    background-image: url(../imgs/dragon.webp);
+}
+
+.starship {
+    background-image: url(../imgs/starship.jpg);
+}
+
+.human-spaceflight {
+    background-image: url(../imgs/human-spaceflight.webp);
+}
+
+.starshield {
+    background-image: url(../imgs/starshield.jpeg);
+}
+
+.starlink {
+    background-image: url(../imgs/starlink.webp);
+}
+
+.rideshare {
+    background-image: url(../imgs/rideshare.jpg);
+}
+
+.section-animate {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.stylePages {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+}
+
+.stylePages h3 {
+    font-size: 90px;
+    margin-bottom: 15px;
+    animation: fadeInUp 2s ease-in-out;
+}
+
+.stylePages p {
+    font-size: 15px;
+    animation: fadeInUp 2s ease-in-out 0.2s;
+    animation-fill-mode: both;    
+}   
+
+
+.stats {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    text-align: center;   
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+.stats div span{
+    font-size: 120px;
+}
+
+.stats div span h4{
+    font-size: 24px;
+}
+
+
+/* Animations */
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(140px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes fadeBounce {
+    0%,20%,40%,60%,80%,100% {
+      opacity: 0;
+      transform: translateY(-20px);  
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Media Queries */
+
+@media (max-width: 960px) {
+    .navbar-items {
+        display: none;
+    }
+
+    .log0-img {
+        margin: none;
+    }
+
+    .logo {
+        width: 150px;
+        margin: auto;
+        top: 0;
+
+    }
+
+    .menu-only {
+        display: block; 
+    }
+
+    .stylePages h3 {
+        font-size: 80px;
+    }
+    
+    .stylePages p {
+        font-size: 12px;    
+    }   
+
+    
+    .stats div span{
+        font-size: 100px;
+    }
+    
+    .stats div span h4{
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 790px) {
+    
+    .stylePages h3 {
+        font-size: 60px;
+    }
+    
+    .stylePages p {
+        font-size: 10px;    
+    }   
+
+    .stats {
+        max-width: 600px;
+    }
+
+    .stats div span{
+        font-size: 80px;
+    }
+    
+    .stats div span h4{
+        font-size: 17px;
+    }
+
+}
+
+@media (max-width: 690px) {
+    .section-inner {
+        bottom: 60px;
+        left: 40px;
+    }
+    
+    .section-inner h4 {
+        font-size: 15px;
+        font-weight: 250;
+    }
+    
+    .section-inner h2 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+    
+    .section-inner span {
+        font-size: 12px;
+        font-weight: 400;
+    }
+
+    footer ul li:first-child {
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    
+}
+
+
+
+@media (max-width: 590px) {
+    
+    .stylePages h3 {
+        font-size: 40px;
+    }
+    
+    .stylePages p {
+        font-size: 8px;    
+    }   
+
+    .stats {
+        max-width: 400px;
+        margin-bottom: 20px;
+    }
+
+    .stats div span{
+        font-size: 60px;
+    }
+    
+    .stats div span h4{
+        font-size: 10px;
+    }
+
+}
+
+
+
+@media (max-width: 420px) {
+    .section-inner {
+        bottom: 25px;
+        left: 25px;
+    }
+    
+    .section-inner h4 {
+        font-size: 13px;
+        font-weight: 250;
+    }
+    
+    .section-inner h2 {
+        font-size: 25px;
+        font-weight: 600;
+        margin-top: 1px;
+    }
+    
+    .section-inner .hover span  {
+        font-size: 5px;
+        font-weight: 400;
+    }
+
+    .section-inner .btn {
+        margin-top: 1px;
+    }
+
+    .stylePages h3 {
+        font-size: 30px;
+    }
+    
+    .stylePages p {
+        font-size: 7px;    
+    }   
+
+    .stats {
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+
+    .stats div span{
+        font-size: 40px;
+    }
+    
+    .stats div span h4{
+        font-size: 6px;
+    }
+
+    footer ul li:first-child {
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    footer ul li {
+        margin-right: 8px;
+    }
+}
+
+
+
+
+
+
