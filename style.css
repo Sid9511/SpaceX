@@ -125,6 +125,7 @@ section {
 }
 
 .section-a {
+<<<<<<< HEAD
     background-image: url("../images/section-a.jpg");
 }
 
@@ -146,6 +147,29 @@ section {
 
 .section-f {
     background-image: url("../images/section-f.webp");
+=======
+    background-image: url("../imgs/section-a.jpg");
+}
+
+.section-b {
+    background-image: "..imgs/section-b.webp";
+}
+
+.section-c {
+    background-image: URL("../imgs/section-c.webp");
+}
+
+.section-d {
+    background-image: URL("../imgs/section-d.webp");
+}
+
+.section-e {
+    background-image: URL("../imgs/section-e.webp");
+}
+
+.section-f {
+    background-image: URL("../imgs/section-f.webp");
+>>>>>>> 4f0e5f225ee40220a9d121b59826d255cd4d2671
 }
 
 .btn {
@@ -356,6 +380,7 @@ footer ul li a:hover {
 
 /* Inner Pages */
 .falcon9 {
+<<<<<<< HEAD
     background-image: url("../images/falcon-9.webp");
 }
 
@@ -385,6 +410,37 @@ footer ul li a:hover {
 
 .rideshare {
     background-image: url("../images/rideshare.jpg");
+=======
+    background-image: URL("../imgs/falcon-9.webp");
+}
+
+.falcon-heavy {
+    background-image: URL("../imgs/falcon-heavy.webp");
+}
+
+.dragon {
+    background-image: URL("../imgs/dragon.webp");
+}
+
+.starship {
+    background-image: URL("../imgs/starship.jpg");
+}
+
+.human-spaceflight {
+    background-image: URL("../imgs/human-spaceflight.webp");
+}
+
+.starshield {
+    background-image: URL("../imgs/starshield.jpeg");
+}
+
+.starlink {
+    background-image: URL("../imgs/starlink.webp");
+}
+
+.rideshare {
+    background-image: URL("../imgs/rideshare.jpg");
+>>>>>>> 4f0e5f225ee40220a9d121b59826d255cd4d2671
 }
 
 .section-animate {
