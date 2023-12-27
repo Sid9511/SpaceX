@@ -125,11 +125,11 @@ section {
 }
 
 .section-a {
-    background-image: url(../imgs/section-a.jpg);
+    background-image: url(/imgs/section-a.jpg);
 }
 
 .section-b {
-    background-image: url(../imgs/section-b.webp);
+    background-image: url(imgs/section-b.webp);
 }
 
 .section-c {
